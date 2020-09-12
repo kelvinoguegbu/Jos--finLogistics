@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand"><img src="~/Content/images/jf-logo.png" style="width:50px; height: 40px;" alt="logo" />   </div>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav ">
+                    <li>@Html.ActionLink("Home", "Home", "Logistics")</li>
+                    <li>@Html.ActionLink("Admin", "Index", "Admins")</li>
+                    <li>@Html.ActionLink("Packages", "Index", "Packages")</li>
+                    <li>@Html.ActionLink("Client", "Index", "Clients")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+
+        <style>
+            .fa {
+                padding-left: 12px;
+            }
+        </style>
+        <center>
+            <br /><br /><br /><hr />
+            <footer class="container" align="center">
+                <h4>Visit our social media platforms</h4>
+                <!-- Add font awesome icons -->
+                <a href="https://web.facebook.com/Jose_finlogistics-113996287057918" style="font-size: 2em; padding: 10px;"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/JFinlogistics?s=12" style="font-size: 2em; padding: 10px;"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/jose_finlogistics/" style="font-size: 2em; padding: 10px;"><i class="fab fa-instagram"></i></a>
+                <a href="www.linkedin.com/in/joséfinLogistics3159921b5" style="font-size: 2em; padding: 10px;"><i class="fab fa-linkedin"></i></a>
+                <p style="color: darkcyan; font-size: 11px; padding-top: 5px; ">Copyright © 2020. All Rights Reserved | José-fin logistics </p>
+            </footer>
+        </center>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

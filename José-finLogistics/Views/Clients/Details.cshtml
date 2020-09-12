@@ -1,0 +1,91 @@
+﻿@model José_finLogistics.Models.Client
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Client</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PickupAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PickupAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemQuantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemQuantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReceiverPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReceiverPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReceiverAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReceiverAddress)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ClientId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

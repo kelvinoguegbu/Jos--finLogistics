@@ -1,0 +1,100 @@
+﻿@model José_finLogistics.Models.EmailModel
+
+
+@{
+    ViewBag.Title = "Services";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<div class="container">
+
+    <br />
+    <br />
+
+
+    <h2 style="color: crimson">OUR SERVICES</h2>
+
+
+    <p name="services">
+        José-fin Logistics domestic delivery are able to deliver at any location within Lagos. We have a 24 hours  standard tracking system to keep our clients updated about their goods. We provide haulage and tracking services within the state.
+
+        José-fin Logistics Limited also makes provision for Final home delivery services within Lagos, with different partners network in Nigeria. José-fin Logistics is currently expanding her domestic delivery services to other States, this being part of an establishing vision of  José-fin logistics.
+
+
+        <div class="card-columns"> </div>
+        <div class="card bg-success"> </div>
+        <div class="card-body text-left"> </div>
+    <p class="card-text"></p>
+
+
+    <table style="        background-color: ghostwhite;
+        box-shadow: 4px 4px 4px orange;
+        border-radius: 8px;
+        height: 150px;
+        width: 300px;
+        font-size: 14px;
+        font-family: Aharoni;" class="table">
+
+        <tbody>
+            <tr>
+                <td style="padding-left: 15px;">
+                    <p style="color:cornflowerblue; font-size:16px;"> Services we offer </p>
+                    <p>Personal errands </p>
+                    <p>Corporate delivery</p>
+                    <p>Document and percel delivery</p>
+                    <p>Food and drink delivery</p>
+                    <p>Online store and ecommerce delivery</p>
+                    <p>Retail store delivery</p>
+                    <p>Special occassion delivery</p>
+                    <p>Pharmacy delivery</p>
+        </tbody>
+    </table>
+
+    <br>
+
+    <div class="row">
+        <div class="col-md-6">
+            <img src="~/Content/images/services-img.jpg" style="width: auto; box-shadow: 8px 8px 8px grey;
+        border-radius: 8px;">
+        </div>
+        <div class="col-md-6" align="right">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="w-100">
+                    
+                    <br />
+                    <br />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control", placeholder = "Fullname" } })
+                            @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.UserEmail, new { htmlAttributes = new { @class = "form-control", placeholder = "Email address" } })
+                            @Html.ValidationMessageFor(model => model.UserEmail, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            @Html.TextAreaFor(model => model.Message, new { @class = "form-control", placeholder = "Enter message here" })
+                            @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-12">
+                            <input type="submit" value="Send" class="btn btn-dark w-100" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

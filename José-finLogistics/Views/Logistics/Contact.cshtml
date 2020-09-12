@@ -1,0 +1,92 @@
+﻿@model José_finLogistics.Models.EmailModel
+
+
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+@if (ViewBag.Feedback != null)
+{
+    <div class="alert alert-success">@ViewBag.Feedback</div>
+}
+
+<div class="container" align="center">
+
+    <br />
+    <br />
+
+    <p style="font-family: Menlo;
+        text-align: center;
+        font-size: 25px;
+        color: tomato;
+    ">WE ARE ALWAYS AVAILABLE FOR YOU! </p>
+
+        <img src="~/Content/images/contactus55.jpeg" width="1250" height="550" style=" box-shadow: 8px 8px 8px grey;
+        border-radius: 8px;">
+        <div class="carousel-caption" style="background-color: rgba(0, 0, 0, 0.4); border-radius: 5px;">
+            <div class="container">
+                <h3> Find us on Map</h3>
+                <br />
+
+                <form action="http://maps.google.com/maps" method="get" target="_blank">
+                    <label for="saddr" style="color: HighlightText;"> <b>Enter your location</b> </label>
+                    <input type="text" name="saddr" />
+                    <input type="hidden" name="daddr" value=" 1 pinewood road northern foreshore estate off chevron drive lekki lagos" />
+                    <input type="submit" style="color: green" value="Get directions" />
+                </form>
+                <br>
+                <br>
+            </div>
+            </div>
+    
+    <br />
+    <br />
+
+    <div>
+        <img src="~/Content/images/contact 2.png">
+        <br /> <br />
+        <table style="background-color: tomato;
+        box-shadow: 8px 8px 8px grey;
+        border-radius: 8px;
+        height: 150px;
+        width: 1200px;
+        font-family: awesome;" class="table">
+
+            <thead>
+                <tr>
+                    <th style="padding-left: 15px;">Head Office</th>
+                    <th style="padding-top: 15px;">Branch Office</th>
+                    <th style="padding-top: 15px;">Opening - Closing Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding-left: 15px;">
+                        Northern Foreshore Estate Chevron Drive Lagos Nigeria.
+                        <p>Call Us: <a href="tel:+2348181133533" class="btn" style="background-color: azure; color: royalblue;" role="button">+2348181133533</a> </p>
+                        <p>
+                            Email Us:
+                            <a href="mailto: josefinlogistics@gmail.com" class="btn" style="background-color: azure; color: royalblue;" role="button">josefinlogistics@gmail.com</a>
+                        </p>
+                    </td>
+
+                    <td>
+                        Northern Foreshore Estate Chevron Drive Lagos Nigeria.
+                        <p>Call Us: <a href="tel:+2348079944914" class="btn" style="background-color: azure; color: royalblue;" role="button">+2348079944914</a></p>
+                        <p>
+                            Email Us:
+                            <a href="mailto: josefinlogistics@gmail.com" class="btn" style="background-color: azure; color: royalblue;" role="button">josefinlogistics@gmail.com</a>
+                        </p>
+                    </td>
+                    <td>8:00AM - 6:00PM</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+
